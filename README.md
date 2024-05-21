@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm David</h1>
-<h3 align="center">CS studen for poland</h3>
+<h3 align="center">CS studen from Poland</h3>
 
 - 🔭 I’m currently working on **AI Content creation management software**
 
