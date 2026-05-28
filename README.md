@@ -1,11 +1,11 @@
 <h1 align="center">Hi, I'm Dawid</h1>
-<h3 align="center">Computer Science Student | Junior Specialist at ZF (MES)</h3>
+<h3 align="center">Computer Science Student | C# developer at ZF</h3>
 
 ---
 
 ### About Me
 
-- Junior Specialist at **ZF**, working with **Manufacturing Execution Systems (MES)**
+- C# developer at **ZF**, working with **Manufacturing Execution Systems (MES)**
 - Computer Science student based in Poland
 - Interested in **software development, automation, and backend systems**
 - Currently developing an **AI content management platform**
@@ -16,15 +16,14 @@
 ### Technical Skills
 
 **Languages**
-- C#, Python, C++
+- C#, Python, C++, Typescript
 
 **.NET & Backend**
 - .NET / .NET Core
-- ASP.NET (Web APIs)
-- Entity Framework (basics)
+- Entity Framework
 
 **Web & Frontend**
-- TypeScript, React
+- TypeScript, React, Angular (basic)
 - Next.js, Tailwind CSS
 
 **Databases**
@@ -52,11 +51,3 @@
 
 ---
 
-### Career Direction
-
-I am focused on developing as a **.NET backend engineer**, with an interest in:
-- scalable backend systems  
-- industrial software (MES / automation)  
-- clean architecture and maintainable code  
-
----
