@@ -11,6 +11,16 @@ $variants = @(
   @{ Name = 'lime'; Branch = 'variant-lime-lab'; Port = 4324 }
 )
 
+function Stop-VariantPort([int] $port) {
+  $processes = @(Get-CimInstance Win32_Process | Where-Object {
+    $_.CommandLine -and $_.CommandLine -match "--port\s+$port(\s|$)"
+  })
+
+  foreach ($process in $processes) {
+    taskkill.exe /PID $process.ProcessId /T /F | Out-Null
+  }
+}
+
 New-Item -ItemType Directory -Force -Path $worktreeRoot | Out-Null
 Push-Location $repo
 
@@ -20,6 +30,8 @@ try {
   $pids = @()
 
   foreach ($variant in $variants) {
+    Stop-VariantPort $variant.Port
+
     if ($knownBranches -notcontains $variant.Branch) {
       throw "Missing branch: $($variant.Branch)"
     }
