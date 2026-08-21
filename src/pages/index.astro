@@ -1,0 +1,167 @@
+---
+import ThreadNavigator from '../components/ThreadNavigator';
+import '../styles/global.css';
+
+const skillGroups = [
+  {
+    label: 'Software',
+    items: ['C#', '.NET', 'TypeScript', 'React', 'Angular'],
+  },
+  {
+    label: 'Systems',
+    items: ['Linux', 'Windows', 'Docker', 'Terminal tools'],
+  },
+  {
+    label: 'Robotics',
+    items: ['Python', 'MuJoCo', 'skrl', 'URDF'],
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Dawid — software builder learning robotics, systems, and practical engineering."
+    />
+    <title>Dawid — Software builder learning robotics</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Dawid home">
+          <span class="wordmark__mark">D/</span>
+          <span>Dawid</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#direction">Direction</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <span class="header-status"><span aria-hidden="true"></span> available to connect</span>
+      </header>
+
+      <main id="top">
+        <section class="hero section-grid" aria-labelledby="hero-title">
+          <div class="hero__copy reveal">
+            <p class="eyebrow"><span>01</span> Software builder / learning robotics</p>
+            <h1 id="hero-title">I learn by building tools that make difficult systems easier to approach.</h1>
+            <p class="hero__lede">
+              Computer Science student in Poland, moving from software and systems work toward more
+              approachable ways to learn with robots.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#direction">Follow the direction <span>↓</span></a>
+              <a class="button button--text" href="#contact">Connect <span>↗</span></a>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="orbit orbit--outer"></div>
+            <div class="orbit orbit--inner"></div>
+            <div class="hero__crosshair">+</div>
+            <div class="hero__coordinate hero__coordinate--top">52°13′N / 21°00′E</div>
+            <div class="hero__coordinate hero__coordinate--bottom">BUILD / LEARN / REPEAT</div>
+            <div class="hero__signal">D/24</div>
+          </div>
+        </section>
+
+        <section class="intro-strip" aria-label="Profile summary">
+          <p>Currently thinking about</p>
+          <p class="intro-strip__statement">How to turn robot learning from a wall into a path.</p>
+          <span class="section-index">01—04</span>
+        </section>
+
+        <section id="direction" class="direction section-grid" aria-labelledby="direction-title">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span>02</span> Current direction</p>
+            <h2 id="direction-title">Start with a small task. Let curiosity do the scaling.</h2>
+          </div>
+          <div class="direction__body reveal">
+            <p>
+              The next idea is an educational site for students and less experienced builders. It should
+              let people imagine simple tasks for URDF robots before asking them to fight a full training
+              stack.
+            </p>
+            <p class="muted">
+              This is an idea in progress, not a shipped platform. The page keeps that distinction visible.
+            </p>
+          </div>
+        </section>
+
+        <section class="threads section-grid" aria-labelledby="threads-title">
+          <div class="threads__label">
+            <p class="eyebrow"><span>03</span> Field notes</p>
+            <p class="vertical-note">A few honest threads</p>
+          </div>
+          <div class="threads__content">
+            <div class="section-heading section-heading--compact reveal">
+              <h2 id="threads-title">Not every useful thing is finished work.</h2>
+              <p class="muted">Switch between current direction, difficult experiments, and systems background.</p>
+            </div>
+            <ThreadNavigator client:load />
+          </div>
+        </section>
+
+        <section class="skills section-grid" aria-labelledby="skills-title">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span>04</span> Evidence-linked skills</p>
+            <h2 id="skills-title">Tools make sense when attached to a problem.</h2>
+          </div>
+          <div class="skill-list">
+            {skillGroups.map((group) => (
+              <div class="skill-group reveal">
+                <p class="eyebrow">{group.label}</p>
+                <ul>
+                  {group.items.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="about" class="about section-grid" aria-labelledby="about-title">
+          <div class="about__stamp" aria-hidden="true">
+            <span>EST.</span>
+            <strong>2001</strong>
+            <span>POLAND</span>
+          </div>
+          <div class="about__copy reveal">
+            <p class="eyebrow"><span>05</span> About</p>
+            <h2 id="about-title">Long-term curiosity. Small incremental progress.</h2>
+            <p>
+              I have been around Linux, Windows, hosted game servers, terminal tools, and small automation
+              experiments since I was young. Along the way, software became the way I test ideas: first
+              through web and backend work, now through robotics and learning systems.
+            </p>
+            <p>
+              I am interested in the space where technical depth meets a person trying something for the
+              first time. That is where the next tool should help.
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" class="contact section-grid" aria-labelledby="contact-title">
+          <div class="contact__heading reveal">
+            <p class="eyebrow"><span>06</span> Contact</p>
+            <h2 id="contact-title">Have a problem worth understanding?</h2>
+          </div>
+          <div class="contact__link reveal">
+            <p class="muted">For now, LinkedIn is the best way to reach me.</p>
+            <a href="https://linkedin.com/in/notcherry" rel="noreferrer" target="_blank">
+              linkedin.com/in/notcherry <span>↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Dawid / software builder</span>
+        <span>Built with curiosity <span class="footer-mark" aria-hidden="true">✳</span></span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </div>
+  </body>
+</html>
