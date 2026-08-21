@@ -14,7 +14,7 @@ I build software, study systems, and explore how robot learning can become easie
 ## Featured repository
 
 - [notcherry](https://github.com/NotCherry/NotCherry) — personal site and robot-learning lab
-- [Live site](https://notcherry.github.io/)
+- [Live site](https://notcherry.github.io/NotCherry/)
 
 ## Contact
 
