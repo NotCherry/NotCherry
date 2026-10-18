@@ -11,26 +11,4 @@ I build software, study systems, and explore how robot learning can become easie
 - C#/.NET, TypeScript, React, and frontend systems
 - Linux, Docker, automation, and developer tooling
 
-## Featured repository
-
-- [notcherry](https://github.com/NotCherry/NotCherry) — personal site and robot-learning lab
-- [Live site](https://notcherry.github.io/NotCherry/)
-
-## Contact
-
-- [LinkedIn](https://linkedin.com/in/notcherry)
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Build production output with:
-
-```bash
-npm run build
-```
-
-`master` pushes deploy automatically through GitHub Pages Actions.
+- [notcherry](https://github.com/NotCherry/RTT) — robot-learning lab
